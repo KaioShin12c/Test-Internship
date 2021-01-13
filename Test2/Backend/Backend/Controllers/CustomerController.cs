@@ -28,94 +28,94 @@ namespace Backend.Controllers
         }
 
         // GET: api/Customer/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Customer>> GetCustomer(string id)
-        {
-            var customer = await _context.Customers.FindAsync(id);
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Customer>> GetCustomer(string id)
+        //{
+        //    var customer = await _context.Customers.FindAsync(id);
 
-            if (customer == null)
-            {
-                return NotFound();
-            }
+        //    if (customer == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return customer;
-        }
+        //    return customer;
+        //}
 
-        // PUT: api/Customer/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCustomer(string id, Customer customer)
-        {
-            if (id != customer.CustomerId)
-            {
-                return BadRequest();
-            }
+        //// PUT: api/Customer/5
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutCustomer(string id, Customer customer)
+        //{
+        //    if (id != customer.CustomerId)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(customer).State = EntityState.Modified;
+        //    _context.Entry(customer).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CustomerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!CustomerExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
-        // POST: api/Customer
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
-        {
-            _context.Customers.Add(customer);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (CustomerExists(customer.CustomerId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //// POST: api/Customer
+        //// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        //[HttpPost]
+        //public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
+        //{
+        //    _context.Customers.Add(customer);
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateException)
+        //    {
+        //        if (CustomerExists(customer.CustomerId))
+        //        {
+        //            return Conflict();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
-        }
+        //    return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
+        //}
 
-        // DELETE: api/Customer/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(string id)
-        {
-            var customer = await _context.Customers.FindAsync(id);
-            if (customer == null)
-            {
-                return NotFound();
-            }
+        //// DELETE: api/Customer/5
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> DeleteCustomer(string id)
+        //{
+        //    var customer = await _context.Customers.FindAsync(id);
+        //    if (customer == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            _context.Customers.Remove(customer);
-            await _context.SaveChangesAsync();
+        //    _context.Customers.Remove(customer);
+        //    await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
-        private bool CustomerExists(string id)
-        {
-            return _context.Customers.Any(e => e.CustomerId == id);
-        }
+        //private bool CustomerExists(string id)
+        //{
+        //    return _context.Customers.Any(e => e.CustomerId == id);
+        //}
     }
 }

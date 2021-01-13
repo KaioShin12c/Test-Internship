@@ -7856,11 +7856,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Practice\\TestIntern\\Backend\\Backend\\Backend.csproj",
+      "projectUniqueName": "E:\\Practice\\TestIntern\\Test2\\Backend\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "E:\\Practice\\TestIntern\\Backend\\Backend\\Backend.csproj",
+      "projectPath": "E:\\Practice\\TestIntern\\Test2\\Backend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\Practice\\TestIntern\\Backend\\Backend\\obj\\",
+      "outputPath": "E:\\Practice\\TestIntern\\Test2\\Backend\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

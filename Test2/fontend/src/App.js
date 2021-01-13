@@ -100,18 +100,22 @@ class App extends Component {
         title: 'CustomerId',
         dataIndex: 'customerId',
         key: 'CustomerId',
+        sorter: (a, b) => a.customerId.localeCompare(b.customerId),
         ...this.getColumnSearchProps('customerId'),
       },
       {
         title: 'Company Name',
         dataIndex: 'companyName',
         key: 'companyName',
+        sortDirections: ['descend', 'ascend'],
+        sorter: (a, b) => a.companyName.localeCompare(b.companyName),
         ...this.getColumnSearchProps('companyName'),
       },
       {
         title: 'Contact Name',
         dataIndex: 'contactName',
         key: 'contactName',
+        sorter: (a, b) => a.contactName.localeCompare(b.contactName),
         ...this.getColumnSearchProps('contactName'),
       },
       {
