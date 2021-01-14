@@ -122,41 +122,49 @@ class App extends Component {
         title: 'Contact Title',
         dataIndex: 'contactTitle',
         key: 'contactTitle',
+        ...this.getColumnSearchProps('contactTitle'),
       },
       {
         title: 'Address',
         dataIndex: 'address',
         key: 'address',
+        ...this.getColumnSearchProps('address'),
       },
       {
         title: 'City',
         dataIndex: 'city',
         key: 'city',
+        ...this.getColumnSearchProps('city'),
       },
       {
         title: 'Region',
         dataIndex: 'region',
         key: 'region',
+        ...this.getColumnSearchProps('region'),
       },
       {
         title: 'Postal Code ',
         dataIndex: 'postalCode',
         key: 'postalCode',
+        ...this.getColumnSearchProps('postalCode'),
       },
       {
         title: 'Country',
         dataIndex: 'country',
         key: 'country',
+        ...this.getColumnSearchProps('country'),
       },
       {
         title: 'Phone',
         dataIndex: 'phone',
         key: 'phone',
+        ...this.getColumnSearchProps('phone'),
       },
       {
         title: 'Fax',
         dataIndex: 'fax',
         key: 'fax',
+        ...this.getColumnSearchProps('fax'),
       },
     ];
 
